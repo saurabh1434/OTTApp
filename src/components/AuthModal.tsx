@@ -16,7 +16,6 @@ const AuthModal: React.FC<Props> = ({ isOpen, onClose, onAuthSuccess }) => {
   });
 
   if (!isOpen) return null;
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
