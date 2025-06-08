@@ -1,15 +1,14 @@
 version: 0.0
 os: linux
 files:
-  - source: build/
-    destination: /var/www/html
-    overwrite: yes
+  - source: /
+    destination: /home/ec2-user/rasaflix
 
 hooks:
-  BeforeInstall:
-    - location: Scripts/clean_old_files.sh
-      timeout: 60
-      runas: root
+  AfterInstall:
+    - location: Scripts/copy_build_files.sh
+      timeout: 180
+      runas: ec2-user
 
   AfterInstall:
     - location: Scripts/copy_build_files.sh
