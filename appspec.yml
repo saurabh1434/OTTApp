@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/rasaflix
+    destination: /home/ec2-user/ottapp
 
 hooks:
   AfterInstall:
