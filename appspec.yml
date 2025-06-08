@@ -7,11 +7,11 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts/clean_old_files.sh
+    - location: Scripts/clean_old_files.sh
       timeout: 60
       runas: root
 
   AfterInstall:
-    - location: scripts/copy_build_files.sh
+    - location: Scripts/copy_build_files.sh
       timeout: 60
       runas: ec2-user
