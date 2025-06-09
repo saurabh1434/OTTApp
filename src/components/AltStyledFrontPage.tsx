@@ -58,10 +58,6 @@ const AltStyledFrontPage = () => {
     const data = await res.json();
     setIsSubscribed(data.isSubscribed);
   };
-  if (!isAuthenticated ) {
-    return <SigninScreen onAuthSuccess={handleAuthSuccess} />;
-  }
-  if (isAdmin) {
   return (
     <div style={styles.page}>
       <div style={styles.header}>
@@ -412,11 +408,7 @@ const AltStyledFrontPage = () => {
 )}
     </div>
   );
-}
-else
-{
-  return <SigninScreen onAuthSuccess={handleAuthSuccess} />;
-}
+
 };
 
 
